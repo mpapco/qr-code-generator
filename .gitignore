@@ -1,0 +1,32 @@
+# Build output. `cargo build` alone fills this with gigabytes of
+# dependencies and incremental state, all of it reproducible from Cargo.toml.
+/target/
+
+# Rustfmt backups and MSVC debug symbols.
+**/*.rs.bk
+*.pdb
+
+# Remembered recipients. The history normally lives in
+# $XDG_CONFIG_HOME/payme-qr/, but --contacts can put it anywhere; it holds
+# real names and bank account numbers and must never reach the repository.
+contacts.yml
+contacts.yaml
+
+# QR codes written into the working directory: the names the form saves under
+# by default, and the ones the README examples use.
+/payme.png
+/payme.svg
+/invoice.png
+/donate.svg
+
+# IDE and editor state. The whole .idea directory is local to this machine;
+# drop this line if you ever want to share the project configuration.
+/.idea/
+/.vscode/
+*.iml
+*.swp
+*~
+
+# OS clutter.
+.DS_Store
+Thumbs.db
